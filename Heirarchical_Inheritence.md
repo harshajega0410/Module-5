@@ -32,22 +32,66 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 
 ## Program
 ```
-class Fish:
-    def type(self):
-        print("fish")
 
+class Details:
+    def __init__(self):
+        self.__id="<No Id>"
+        self.__name="<No Name>"
+        self.__gender="<No Gender>"
+    def setData(self,id,name,gender):
+        self.__id=id
+        self.__name=name
+        self.__gender=gender
+    def showData(self):
+        print("Id: ",self.__id)
+        print("Name: ", self.__name)
+        print("Gender: ", self.__gender)
 
-class Shark:
-    def type(self):
-        print("shark")
+class Employee(Details): #Inheritance
+    def __init__(self):
+        self.__company="<No Company>"
+        self.__dept="<No Dept>"
+    def setEmployee(self,id,name,gender,comp,dept):
+        self.setData(id,name,gender)
+        self.__company=comp
+        self.__dept=dept
+    def showEmployee(self):
+        self.showData()
+        print("Hospital: ", self.__company)
+        print("Department: ", self.__dept)
 
+class Patient(Details): #Inheritance
+    def __init__(self):
+        self.__hospital="<No Hospital>"
+        self.__dept="<No Dept>"
+    def setEmployee(self,id,name,gender,hos,dept):
+        self.setData(id,name,gender)
+        self.__hospital=hos
+        self.__dept=dept
+    def showEmployee(self):
+        self.showData()
+        print("Hospital: ", self.__hospital)
+        print("Department: ", self.__dept)
 
-obj_goldfish = Fish()
-obj_hammerhead = Shark()
+id=int(input())
+name=input()
+gender=input()
+comp=input()
+dept=input()
+id1=int(input())
+nam=input()
+gen=input()
+hosp=input()
+dep=input()
 
-obj_goldfish.type()
-obj_hammerhead.type()
-```
+print("Doctor Object")
+e=Employee()
+e.setEmployee(id,name,gender,comp,dept)
+e.showEmployee()
+print("\nPatient Object")
+d = Patient()
+d.setEmployee(id1, nam, gen, hosp, dep)
+d.showEmployee()
 ## Sample Output
-<img width="423" height="240" alt="image" src="https://github.com/user-attachments/assets/e3f43499-8018-46bd-81ec-112e813b93b2" />
+<img width="590" height="515" alt="image" src="https://github.com/user-attachments/assets/f6ea38b8-4d81-422a-b354-8cfeeabc4d27" />
 
