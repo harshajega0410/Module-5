@@ -21,9 +21,22 @@ The program defines a class `Demo` with:
    - Create an instance of the `Demo` class.
    - Delete the object using the `del` keyword.
 ## Program
-Add code Here
+```
+class Rectangle:
+    def __init__(self, length, width):
+        self.__length = length  # Private variable
+        self.__width = width    # Private variable
+    
+    def print_values(self):
+        print(self.__length)
+        print(self.__width)
+
+rect = Rectangle(5, 3)
+rect.print_values()
+```
 
 ## 🧪 Output
+<img width="382" height="207" alt="image" src="https://github.com/user-attachments/assets/5364580e-6f08-4f90-b794-f5db35f14f2f" />
 
 ## Result
-
+Thus the prgram has been successfully executed.
