@@ -31,6 +31,23 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+```
+class Fish:
+    def type(self):
+        print("fish")
+
+
+class Shark:
+    def type(self):
+        print("shark")
+
+
+obj_goldfish = Fish()
+obj_hammerhead = Shark()
+
+obj_goldfish.type()
+obj_hammerhead.type()
+```
 ## Sample Output
+<img width="423" height="240" alt="image" src="https://github.com/user-attachments/assets/e3f43499-8018-46bd-81ec-112e813b93b2" />
 
